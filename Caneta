@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Caneta {
+
+	private String marca;
+
+	private List<Tinta> ltinta = new ArrayList<Tinta>();
+	
+	public void addTinta(Tinta tinta) {
+		ltinta.add(tinta);
+	}
+	
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Caneta [marca=");
+		builder.append(marca);
+		builder.append("]");
+		for (Tinta tinta:ltinta) {
+			builder.append(tinta.toString());
+		}
+		return builder.toString();
+	}
+	
+	
+}
