@@ -1,0 +1,45 @@
+public class Main {
+
+	public static void main(String[] args) {
+		//Generalização
+		Comida c=  new Comida("CupNoodles");
+		System.out.println(c);
+		
+		Macarrao m = new Macarrao("CupNoodles", "Miojo");
+		System.out.println(m);
+
+		//Dependência
+		
+		JogoOnline jogo = new JogoOnline();
+		jogo.setNome("Dark Souls");
+		
+		Console cons = new Console();
+		cons.setMarca("PS4");
+		cons.jogar(jogo);
+		
+		//Agregação
+		
+		Tinta t1 = new Tinta("azul");
+		Tinta t2 = new Tinta("preto");
+		Tinta t3 = new Tinta("vermelho");
+		
+		Caneta can = new Caneta();
+		can.setMarca("Bic");
+		can.addTinta(t1);
+		can.addTinta(t2);
+		can.addTinta(t3);
+		
+		System.out.println(can);
+		
+		//Composição
+		Navegador n = new Navegador();
+		
+		n.setMarca("Mozilla Firefox");
+		n.addWebsite("www.youtube.com");
+		n.addWebsite("https://classroom.google.com/c/MTg3NDkxNjY0MjM2/a/MjcwNjk5OTU0MDAy/details");
+		System.out.println(n);
+		
+		
+	}
+
+}
