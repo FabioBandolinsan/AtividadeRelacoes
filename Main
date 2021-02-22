@@ -1,44 +1,36 @@
+
 public class Main {
 
 	public static void main(String[] args) {
 		//Generalização
-		Comida c=  new Comida("CupNoodles");
+		Veiculo v = new Veiculo("OOO-0000");
+		System.out.println(v);
+		
+		Carro c = new Carro("OOO-0000","Nissan");
 		System.out.println(c);
 		
-		Macarrao m = new Macarrao("CupNoodles", "Miojo");
-		System.out.println(m);
-
-		//Dependência
+		//Dependencia
+		Combustivel com = new Combustivel();
+		com.setTipo("Gasolina comum");
+		com.setQuantidade(10);
 		
-		JogoOnline jogo = new JogoOnline();
-		jogo.setNome("Dark Souls");
-		
-		Console cons = new Console();
-		cons.setMarca("PS4");
-		cons.jogar(jogo);
+		c.ligar(com);
 		
 		//Agregação
+		Motor m1 = new Motor(1);
+		Motor m2 = new Motor(2);
+		Motor m3 = new Motor(3);
 		
-		Tinta t1 = new Tinta("azul");
-		Tinta t2 = new Tinta("preto");
-		Tinta t3 = new Tinta("vermelho");
+		c.addMotor(m1);
+		c.addMotor(m2);
+		c.addMotor(m3);
 		
-		Caneta can = new Caneta();
-		can.setMarca("Bic");
-		can.addTinta(t1);
-		can.addTinta(t2);
-		can.addTinta(t3);
-		
-		System.out.println(can);
+		System.out.println(c);
 		
 		//Composição
-		Navegador n = new Navegador();
+		c.addPortaMalas(1);
 		
-		n.setMarca("Mozilla Firefox");
-		n.addWebsite("www.youtube.com");
-		n.addWebsite("https://classroom.google.com/c/MTg3NDkxNjY0MjM2/a/MjcwNjk5OTU0MDAy/details");
-		System.out.println(n);
-		
+		System.out.println(c);
 		
 	}
 
