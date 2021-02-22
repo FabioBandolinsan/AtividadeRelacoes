@@ -39,8 +39,16 @@ public class Carro extends Veiculo {
 			this.marca = marca;
 	}
 
-	public void ligar (Combustivel combustivel) {
-		System.out.println(combustivel.toString());
+		public void ligar (Combustivel combustivel) {
+		if(combustivel.getQuantidade()>0) {
+			System.out.println(combustivel.toString());
+			chave = true;
+		}
+	}
+
+	public void desligar (Combustivel combustivel) {
+			System.out.println(combustivel.toString());
+			chave = false;
 	}
 	
 	@Override
