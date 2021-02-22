@@ -1,0 +1,33 @@
+
+public class Combustivel {
+
+	private String tipo;
+	private float quantidade;
+	//quantidade está em litros
+	public String getTipo() {
+		return tipo;
+	}
+	public void setTipo(String tipo) {
+		if(tipo.length()>0)
+			this.tipo = tipo;
+	}
+	public float getQuantidade() {
+		return quantidade;
+	}
+	public void setQuantidade(float quantidade) {
+		if(quantidade>=0)
+			this.quantidade = quantidade;
+	}
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Combustivel [tipo=");
+		builder.append(tipo);
+		builder.append(", quantidade=");
+		builder.append(quantidade);
+		builder.append("]");
+		return builder.toString();
+	}
+	
+	
+}
