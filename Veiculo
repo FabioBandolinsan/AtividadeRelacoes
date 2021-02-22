@@ -1,0 +1,33 @@
+
+public class Veiculo {
+
+	private String placa;
+
+	public Veiculo() {
+		
+	}
+	
+	public Veiculo(String placa) {
+		setPlaca(placa);
+	}
+	
+	public String getPlaca() {
+		return placa;
+	}
+
+	public void setPlaca(String placa) {
+		if(placa.length()>0)
+			this.placa = placa;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Veiculo [placa=");
+		builder.append(placa);
+		builder.append("]");
+		return builder.toString();
+	}
+	
+	
+}
